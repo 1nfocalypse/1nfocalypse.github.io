@@ -56,7 +56,7 @@ plugins:
 
 author:
   name   : "1nfocalypse"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/biopicsite.jpg"
   bio    : "GCC Contributor (C++26 Philox Engine). Cryptography enthusiast. Your effort to remain what you are is what limits you."
   links:
     - label: "GitHub"
