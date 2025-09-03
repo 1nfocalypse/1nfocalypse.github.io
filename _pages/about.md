@@ -3,6 +3,30 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+Hi! Thank you for visiting my site!
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+I'm a hobbyist cryptographer and systems developer. I particularly enjoy PRNGs, international crypto, and deniable cryptography.
+Some things I've done:
+- Upstreamed Philox Engine to GCC's libstdc++-v3 for C++26
+- Spoke at DEFCON 33 via the Crypto Privacy Village on PRNG design, use, and exploitation
+- Authored a survey also on PRNG design, use, and exploitation, including implementations and demos
+- Wrote the modern crypto track for a black badge CTF @ DEFCON 33 ("? Cube")
+
+Some things I'm currently doing:
+- Implementing a portable 128 bit unsigned type for Philox Engine in GCC
+- Authoring a survey of Chinese and Russian cryptologic standards + academic implementations
+- Tinkering with a new sender-deniable symmetric scheme
+- Cryptanalyzing Philox
+
+Some additional things about me:
+I'm a bit of a cyberpunk nerd, and enjoy hardcore electronic genres. I'm a big fan of open source (particularly free) software,
+as well as privacy-centric projects like Signal. My primary languages of choice are C++ and Python, although I have written code in
+JavaScript, Java, Haskell, C, and R besides that. I'm also interested in numerics, and hope to contribute to libstdc++-v3's <linalg>
+header and the surrounding components once I've concluded work for Philox Engine. It's also my solemn duty to shill Void Linux whenever
+possible, so consider that part accomplished.
+
+Greetz:
+- [The Algebraists Anonymous](https://aamath.org/)
+- \>math is /sci/!!!!!!
+
+"Cyberspace. A consensual hallucination experienced daily by billions of legitimate operators, in every nation."
