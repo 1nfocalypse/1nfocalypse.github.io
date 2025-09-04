@@ -43,8 +43,8 @@ $$o_n = (a * o_{n-1} + c) \bmod 2^{64} \rightarrow o_n = (1 * o_{n-1} + 0x9E3779
 We prove maximal period via Hull-Dobell:
 
 - $GCD(2^{64}, 0x9E3779B97F4A7C15_{16})$ == $1$? True
-- $a - 1 = 0 \rightarrow 0 \mid 2$
-- $a - 1 = 0 \rightarrow 0 \mid 4$
+- $a - 1 = 0 \rightarrow 2 \mid 0$
+- $a - 1 = 0 \rightarrow 4 \mid 0$
 
 Ok, so they have the right idea for ensuring unique and long-period inputs in a very lightweight manner. While still suffering from Marsaglia's Theorem on the inputs, the structure will be destroyed by [`mix32(long z)`](https://hg.openjdk.org/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/util/concurrent/ThreadLocalRandom.java#l210), defined as:
 ```Java
