@@ -38,11 +38,14 @@ Fairly straightforward function, but not entirely informative about what's actua
     }
 ```
 This gives us a bit more of the information we're looking for. Each thread has some 64 bit value as an identifier, which becomes the seed of the PRNG, guaranteeing uniqueness. Then, on each call, this is updated by adding the value GAMMA (`0x9E3779B97F4A7C15`) modulo $2^{64}$. GAMMA, per Videla's writeup, comes from RC5 (Rivest Cipher 5), which in turn is derived 
-from the golden ratio as a nothing-up-my-sleeve number. This allows for a maximal period of unique 64 bit outputs, and given that each seed is also unique, provides a strong base point for input into a PRNG. This can be thought of readily as a Linear Congruential Generator with the multiplicand set to $1$, i.e. $o_n = (a * o_{n-1} + c) \bmod 2^{64} \rightarrow o_n 
-= (1 * o_{n-1} + 0x9E3779B97F4A7C15_{16}) \bmod 2^{64}$. We prove maximal period via Hull-Dobell:
+from the golden ratio as a nothing-up-my-sleeve number. This allows for a maximal period of unique 64 bit outputs, and given that each seed is also unique, provides a strong base point for input into a PRNG. This can be thought of readily as a Linear Congruential Generator with the multiplicand set to $1$, i.e.
+$$o_n = (a * o_{n-1} + c) \bmod 2^{64} \rightarrow o_n = (1 * o_{n-1} + 0x9E3779B97F4A7C15_{16}) \bmod 2^{64}$$
+We prove maximal period via Hull-Dobell:
+
 - $GCD(2^{64}, 0x9E3779B97F4A7C15_{16})$ == $1$? True
 - $a - 1 = 0 \rightarrow 0 \mid 2$
 - $a - 1 = 0 \rightarrow 0 \mid 4$
+
 Ok, so they have the right idea for ensuring unique and long-period inputs in a very lightweight manner. While still suffering from Marsaglia's Theorem on the inputs, the structure will be destroyed by [`mix32(long z)`](https://hg.openjdk.org/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/util/concurrent/ThreadLocalRandom.java#l210), defined as:
 ```Java
     private static int mix32(long z) {
