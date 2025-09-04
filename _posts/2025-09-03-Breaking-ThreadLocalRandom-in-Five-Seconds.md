@@ -1,5 +1,6 @@
 ---
 title: "Breaking ThreadLocalRandom in Five Seconds"
+math: true
 excerpt_separator: "<!--more-->"
 categories:
   - Blog
